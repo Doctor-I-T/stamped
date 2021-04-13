@@ -21,8 +21,11 @@ key=$(ipfs key gen -t rsa -s 3072 --ipns-base b58mh $symb)
 ipns=QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
 fi
 
+if ! -d $tsdir; then mkdir -p $tsdir; fi
 # ------------------------------------------------------
 cd $tsdir
+if ! -d $artifact; then mkdir -p $artifact; fi
+
 
 echo "We've got (time)stamp" | ipfs add --pin=true -q
 
