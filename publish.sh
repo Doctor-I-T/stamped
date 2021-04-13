@@ -6,7 +6,7 @@ tic=$(date +%s)
 ns=$(date +%N)
 loc="Ecublens (Switzerland)"
 symb=timestamp
-tsdir=ts
+tsdir=../ts
 date=$(date)
 pgm=$(readlink -m $0)
 echo "--- # $pgm on $date"
@@ -20,7 +20,6 @@ else
 key=$(ipfs key gen -t rsa -s 3072 --ipns-base b58mh $symb)
 ipns=QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
 fi
-
 
 # ------------------------------------------------------
 cd $tsdir
