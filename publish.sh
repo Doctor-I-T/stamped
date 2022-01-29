@@ -1,6 +1,7 @@
 #
 
 artifact=artifact
+stamp=$(date +"%Y%m%d%H%M%S%N")
 
 tic=$(date +%s)
 ns=$(date +%N)
@@ -21,13 +22,17 @@ key=$(ipfs key gen -t rsa -s 3072 --ipns-base b58mh $symb)
 ipns=QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
 fi
 
-if ! -d $tsdir; then mkdir -p $tsdir; fi
+if [ ! -d $tsdir ]; then mkdir -p $tsdir; fi
 # ------------------------------------------------------
 cd $tsdir
-if ! -d $artifact; then mkdir -p $artifact; fi
+if [ ! -d $artifact ]; then mkdir -p $artifact; fi
 
 
 echo "We've got (time)stamp" | ipfs add --pin=true -q
+date +"%Y%m%d%H%M%S%N" | ipfs add --pin=true -q
+date +"%Y%m%d%H%M%S" | ipfs add -q
+date +"%s" | ipfs add -q
+date +"*nixtime: %s" | ipfs add -q
 
 ver=$(perl -S version -a $0 | xyml scheduled)
 echo ver: $ver
@@ -59,8 +64,10 @@ nip=$(head -1 nip.txt)
 echo nip: $nip
 # ------------------------------------------------------
 url=https://www.worldometers.info/coronavirus/
-if expr $tic -  $(stat -c '%X' $artifact/index.html) \> 1711 ; then
+if [ -e $artifact/index.html ]; then
+if expr $tic - $(stat -c '%X' $artifact/index.html) \> 1711 ; then
  rm $artifact/index.html
+fi
 fi
 if [ ! -e $artifact/index.html ]; then
 wget $opt -P $artifact -N -nH --cut-dirs=2 -E --convert-file-only -K -p -e robots=off -B "$url" --user-agent="$ua" -a $artifact/log.txt "$url"
@@ -119,7 +126,7 @@ git push --delete $remote "$ver"
 fi
 fi
 ( cd $gitdir; git --bare update-server-info )
-dgit=(ipfs add -r $gitdir -Q)
+dgit=$(ipfs add -r $gitdir -Q)
 echo $tic: $dgit >> dgit.log
 
 echo "git push : "
@@ -129,10 +136,15 @@ tar zcf ../bal.tgz .
 mv ../bal.tgz .
 qm=$(ipfs add -w -r . $gitdir/info/refs -Q);
 echo $(date +"%s%N"): $qm >> bal.log
-ipfs name publish --key=$symb $qm &
+ipfs name publish --key=$symb $qm
+wget -E -p -k https://dns-lookup.com/_dnslink.timestamp.ml
 # external party
-pina $qm "$symb-$(date +%y%m%d%H%M.%S)"
+pina $qm "$symb-$(date +%Y%m%d%H%M.%S)"
 git push github
 git push gitlab
 git push bitbucket
 
+date +"%Y%m%d%H%M%S%N: $qm" | ipfs add --pin=true -q
+date +"%Y%m%d%H%M%S: $qm" | ipfs add -q
+date +"%s: $qm" | ipfs add -q
+date +"$qm at *nixtime %s" | ipfs add -q
