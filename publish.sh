@@ -6,7 +6,7 @@ tic=$(date +%s)
 ns=$(date +%N)
 loc="Ecublens (Switzerland)"
 symb=timestamp
-tsdir=../ts
+tsdir=.
 date=$(date)
 pgm=$(readlink -m $0)
 echo "--- # $pgm on $date"
@@ -21,11 +21,11 @@ key=$(ipfs key gen -t rsa -s 3072 --ipns-base b58mh $symb)
 ipns=QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
 fi
 
-if ! -d $tsdir; then mkdir -p $tsdir; fi
+
 # ------------------------------------------------------
 cd $tsdir
-if ! -d $artifact; then mkdir -p $artifact; fi
-
+git checkout master
+gituser
 
 echo "We've got (time)stamp" | ipfs add --pin=true -q
 
@@ -50,7 +50,8 @@ gpg --batch -o original-timestamp.md --verify original-timestamp.md.gpg
 gpg --clear-sign -a -u "Michel G. Combes" original-timestamp.md
 
 if [ ! -e nip.txt ]; then
-curl https://iph.heliohost.org/cgi-bin/remote_addr.pl > nip.txt
+nip=$(curl -s https://app.safewatch.care/psgi/remote_addr.txt)
+echo $nip > nip.txt
 echo $tic >> nip.txt
 echo $$ >> nip.txt
 echo $ns >> nip.txt
@@ -59,8 +60,10 @@ nip=$(head -1 nip.txt)
 echo nip: $nip
 # ------------------------------------------------------
 url=https://www.worldometers.info/coronavirus/
-if expr $tic -  $(stat -c '%X' $artifact/index.html) \> 1711 ; then
+if [ -e $artifact/index.html ]; then
+if expr $tic -  $(stat -c '%X' $artifact/index.html) \> 1711 >/dev/null; then
  rm $artifact/index.html
+fi
 fi
 if [ ! -e $artifact/index.html ]; then
 wget $opt -P $artifact -N -nH --cut-dirs=2 -E --convert-file-only -K -p -e robots=off -B "$url" --user-agent="$ua" -a $artifact/log.txt "$url"
@@ -83,6 +86,21 @@ sed -e "s/tic: .*/tic: $tic/" -e "s/ver: .*/ver: $ver/" -e "s/ns: .*/ns: $ns/" \
     pandoc --template=timestamp.md timestamp.md | pandoc -o - | sed -e "s/\`<br>\`{=html}/\n/g" > timestamp.txt 
     gpg --clear-sign -a -u "Michel G. Combes" timestamp.txt
 
+# compute sha for .asc file
+if [ -e timestamp.txt.asc.ots ]; then
+    sha=$(ots info  timestamp.txt.asc.ots | cut -d' ' -f4)
+    otid=$(echo $hash | cut -c-12)
+    ots upgrade timestamp.txt.asc.ots
+    mv -n timestamp.txt.asc.ots ots/timestamp-$otid.txt.asc.ots
+fi
+hash=$(openssl sha256 -r timestamp.txt.asc | cut -d' ' -f1)
+otid=$(echo $hash | cut -c-12)
+echo otid: $otid
+rm -f timestamp.txt.asc.ots
+ots stamp timestamp.txt.asc
+cp -p timestamp.txt.asc timestamp-$otid.txt.asc
+cp -p timestamp.txt.asc.ots ots/timestamp-$otid.txt.asc.ots
+
 cp -p $gitdir/info/refs info-refs.txt
 # ------------------------------------------------------
 
@@ -96,13 +114,14 @@ export GIT_COMMITTER_NAME="$fullname"
 export GIT_COMMITTER_EMAIL="$email"
 
 
-git add qm.log timestamp.txt $artifact/wmeters.txt
+git add qm.log timestamp.txt timestamp.txt.asc timestamp.txt.asc.ots
+
 
 
 date=$(date +%D);
 time=$(date +%T);
 
-msg="stamped at $date on $time by $fullname (v$ver)"
+msg="stamped at $date on $time by $fullname ($ver)"
 if git commit -a -m "$msg"; then
 gitid=$(git rev-parse HEAD)
 git tag -f -a $ver -m "tagging $gitid on $date"
@@ -119,20 +138,25 @@ git push --delete $remote "$ver"
 fi
 fi
 ( cd $gitdir; git --bare update-server-info )
-dgit=(ipfs add -r $gitdir -Q)
+dgit=$(ipfs add -r $gitdir -Q)
 echo $tic: $dgit >> dgit.log
 
 echo "git push : "
 branch=$(git rev-parse --abbrev-ref HEAD)
 git push --follow-tags $remote $branch
+rm -f bal.tgz;
 tar zcf ../bal.tgz .
 mv ../bal.tgz .
 qm=$(ipfs add -w -r . $gitdir/info/refs -Q);
 echo $(date +"%s%N"): $qm >> bal.log
-ipfs name publish --key=$symb $qm &
+ipfs name publish --key=$symb $qm --allow-offline 
 # external party
 pina $qm "$symb-$(date +%y%m%d%H%M.%S)"
-git push github
+
+git checkout main
+git add ots $artifact/wmeters.txt
+git commit -a -m "$msg"
+git push github main
 git push gitlab
 git push bitbucket
-
+git checkout master
