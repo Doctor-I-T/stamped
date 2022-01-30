@@ -1,6 +1,7 @@
 #
 
-artifact=artifact
+basedir=$HOME/repo/gist/stampit
+artifact=$basedir/artifact
 
 tic=$(date +%s)
 ns=$(date +%N)
@@ -10,8 +11,13 @@ tsdir=ts
 date=$(date)
 pgm=$(readlink -m $0)
 echo "--- # $pgm on $date"
+sed -e 's/^tsdir=.*/tsdir=./' $0 > $tsdir/${0##*/}
 
-playload="$*"
+if [ -e playload.txt ]; then
+  playload=$(perl -pn -e 's/\n/\\n/g' playload.txt)
+else
+  playload="$*"
+fi
 
 if ipfs key list | grep -q $symb; then
 key=$(ipfs key list -l --ipns-base b58mh | grep -w $symb | cut -d' ' -f 1)
@@ -24,7 +30,7 @@ fi
 
 # ------------------------------------------------------
 cd $tsdir
-git checkout master
+git checkout gist
 gituser
 
 echo "We've got (time)stamp" | ipfs add --pin=true -q
@@ -60,14 +66,17 @@ nip=$(head -1 nip.txt)
 echo nip: $nip
 # ------------------------------------------------------
 url=https://www.worldometers.info/coronavirus/
+if [ -e $artifact/index.html ]; then
 if expr $tic -  $(stat -c '%X' $artifact/index.html) \> 1711 >/dev/null; then
  rm $artifact/index.html
+fi
 fi
 if [ ! -e $artifact/index.html ]; then
 wget $opt -P $artifact -N -nH --cut-dirs=2 -E --convert-file-only -K -p -e robots=off -B "$url" --user-agent="$ua" -a $artifact/log.txt "$url"
 fi
 pandoc -t html -t markdown $artifact/index.html | grep -v -e ':::' -e '^$' > wmeters.md
 pandoc -t html -t plain $artifact/index.html > $artifact/wmeters.txt
+cp -p $artifact/wmeters.txt .
 if [ -e timestamp.md ]; then
 mv timestamp.md previous-timestamp.md
 fi
@@ -96,7 +105,7 @@ otid=$(echo $hash | cut -c-12)
 echo otid: $otid
 rm -f timestamp.txt.asc.ots
 ots stamp timestamp.txt.asc
-cp -p timestamp.txt.asc timestamp-$otid.txt.asc
+cp -p timestamp.txt.asc signed/timestamp-$otid.txt.asc
 cp -p timestamp.txt.asc.ots ots/timestamp-$otid.txt.asc.ots
 
 cp -p $gitdir/info/refs info-refs.txt
@@ -135,6 +144,10 @@ if git ls-remote --tags | grep "$ver"; then
 git push --delete $remote "$ver"
 fi
 fi
+
+git checkout master
+git merge gist
+
 ( cd $gitdir; git --bare update-server-info )
 dgit=$(ipfs add -r $gitdir -Q)
 echo $tic: $dgit >> dgit.log
@@ -152,7 +165,7 @@ ipfs name publish --key=$symb $qm --allow-offline
 pina $qm "$symb-$(date +%y%m%d%H%M.%S)"
 
 git checkout main
-git add ots $artifact/wmeters.txt
+git add ots wmeters.txt
 git commit -a -m "$msg"
 git push github main
 git push gitlab
