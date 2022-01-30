@@ -15,7 +15,7 @@ echo "--- # $pgm on $date"
 sed -e 's/^tsdir=.*/tsdir=./' $0 > $gistdir/${0##*/}
 
 if [ -e playload.txt ]; then
-  playload=$(perl -pn -e 's/\n/\\n/g' playload.txt)
+  playload=$(perl -pn -e 'chomp; s/\n/\\n/g' playload.txt)
 else
   playload="$*"
 fi

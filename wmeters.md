@@ -4,26 +4,26 @@
 -   [Population](https://www.worldometers.info/population/)
 []{.underline}
 COVID-19 Coronavirus Pandemic
-Last updated: January 30, 2022, 10:30 GMT
+Last updated: January 30, 2022, 11:13 GMT
 [Weekly
 Trends](https://www.worldometers.info/coronavirus/weekly-trends/){.new_badge_link}
 - [Graphs](https://www.worldometers.info/coronavirus/worldwide-graphs/)
 - [Countries](index.html#countries) - [News](index.html#news)
 Coronavirus Cases:
 ==================
-[373,477,766 ]{style="color:#aaa"}
+[373,477,840 ]{style="color:#aaa"}
 [view by country](index.html#countries)
 Deaths:
 =======
 5,677,260
 Recovered:
 ==========
-294,931,657
+294,931,709
 [ Active Cases ]{.panel-title
 style="font-size:18px; text-transform:uppercase; font-weight:100"}
-72,868,849
+72,868,871
 Currently Infected Patients
-[72,774,369]{.number-table style="color:#8080FF"} (**99.9**%)
+[72,774,391]{.number-table style="color:#8080FF"} (**99.9**%)
 in Mild Condition
 \
 [94,480]{.number-table style="color:red "} (**0.1**%)
@@ -33,9 +33,9 @@ Serious or Critical
 [Show Statistics](javascript:%20void(0);){.flip_cases_back}
 [ Closed Cases ]{.panel-title
 style="font-size:18px; text-transform:uppercase; font-weight:100"}
-300,608,917
+300,608,969
 Cases which had an outcome:
-[294,931,657]{.number-table style="color:#8ACA2B"} (**98**%)
+[294,931,709]{.number-table style="color:#8ACA2B"} (**98**%)
 Recovered / Discharged
 \
 [ 5,677,260]{.number-table} (**2**%)
@@ -103,9 +103,9 @@ Columns
         South America                                                                                             48,189,089    +35,975    1,213,517   +238     41,517,817                                                          5,457,755    14,872                                                                                                                                                                      South America                                                          
         Europe                                                                                                    123,905,680   +281,878   1,613,146   +815     92,859,290                                              +220,591    29,433,244   18,629                                                                                                                                                                      Europe                                                                 
         Africa                                                                                                    10,986,128    +5,960     239,062     +15      9,772,302                                               +1,402      974,764      2,534                                                                                                                                                                       Africa                                                                 
-        Oceania                                                                                                   2,755,901     +36,614    6,097       +86      2,400,766                                               +59,273     349,038      431                                                                                                                                                                         Australia/Oceania                                                      
+        Oceania                                                                                                   2,755,975     +36,688    6,097       +86      2,400,818                                               +59,325     349,060      431                                                                                                                                                                         Australia/Oceania                                                      
                                                                                                                   721                      15                   706                                                                 0            0                                                                                                                                                                                                                                                  
-        World                                                                                                     373,477,766   +551,827   5,677,260   +1,832   294,931,657                                             +415,956    72,868,849   94,480      47,914        728.3                                                                                                                                             All                                                                    
+        World                                                                                                     373,477,840   +551,901   5,677,260   +1,832   294,931,709                                             +416,008    72,868,871   94,480      47,914        728.3                                                                                                                                             All                                                                    
   1     [USA](https://www.worldometers.info/coronavirus/country/us/){.mt_a}                                       75,481,122               906,861              45,882,520                                                          28,691,741   23,945      225,950       2,715      897,795,908   2,687,514    [334,061,823](https://www.worldometers.info/world-population/us-population/)                                North America       4         368       0                              85,888
   2     [India](https://www.worldometers.info/coronavirus/country/india/){.mt_a}                                  41,092,522               494,110              38,713,494                                                          1,884,918    8,944       29,323        353        725,774,705   517,899      [1,401,383,801](https://www.worldometers.info/world-population/india-population/)                           Asia                34        2,836     2                              1,345
   3     [Brazil](https://www.worldometers.info/coronavirus/country/brazil/){.mt_a}                                25,247,477               626,643              22,162,914                                                          2,457,920    8,318       117,463       2,915      63,776,166    296,715      [214,940,693](https://www.worldometers.info/world-population/brazil-population/)                            South America       9         343       3                              11,435
@@ -315,7 +315,7 @@ Columns
   204   [Bhutan](https://www.worldometers.info/coronavirus/country/bhutan/){.mt_a}                                4,566                    4                    2,780                                                               1,782                    5,817         5          1,439,188     1,833,372    [784,995](https://www.worldometers.info/world-population/bhutan-population/)                                Asia                172       196,249   1                              2,270
   205   [St. Barth](https://www.worldometers.info/coronavirus/country/saint-barthelemy/){.mt_a}                   3,435                    6                    N/A                                                     N/A         N/A                      346,131       605        56,491        5,692,362    [9,924](https://www.worldometers.info/world-population/saint-barthelemy-population/)                        North America       3         1,654     0                              298,972
   206   [Anguilla](https://www.worldometers.info/coronavirus/country/anguilla/){.mt_a}                            2,324                    8                    2,258                                                               58                       152,754       526        51,382        3,377,284    [15,214](https://www.worldometers.info/world-population/anguilla-population/)                               North America       7         1,902     0                              3,812
-  207   [Palau](https://www.worldometers.info/coronavirus/country/palau/){.mt_a}                                  1,404                                         251                                                                 1,153        9           77,016                   20,133        1,104,388    [18,230](https://www.worldometers.info/world-population/palau-population/)                                  Australia/Oceania   13                  1                              63,247
+  207   [Palau](https://www.worldometers.info/coronavirus/country/palau/){.mt_a}                                  1,478         +74                             303                                                     +52         1,175        9           81,075                   20,133        1,104,388    [18,230](https://www.worldometers.info/world-population/palau-population/)                                  Australia/Oceania   12                  1       4,059                  64,454
   208   [Solomon Islands](https://www.worldometers.info/coronavirus/country/solomon-islands/){.mt_a}              898                      5                    25                                                                  868          5           1,259         7          5,117         7,173        [713,397](https://www.worldometers.info/world-population/solomon-islands-population/)                       Australia/Oceania   794       142,679   139                            1,217
   209   [Saint Pierre                                                                                             856                                           658                                                                 198          1           148,895                  17,044        2,964,690    [5,749](https://www.worldometers.info/world-population/saint-pierre-and-miquelon-population/)               North America       7                   0                              34,441
         Miquelon](https://www.worldometers.info/coronavirus/country/saint-pierre-and-miquelon/){.mt_a}                                                                                                                                                                                                                                                                                                                                                                                              
@@ -340,9 +340,9 @@ Columns
         **Total:**                                                                                                48,189,089    +35,975    1,213,517   +238     41,517,817                                              +-28        5,457,755    14,872                                                                                                                                                                      South America                                                          
         **Total:**                                                                                                123,905,680   +281,878   1,613,146   +815     92,859,290                                              +220,591    29,433,244   18,629                                                                                                                                                                      Europe                                                                 
         **Total:**                                                                                                10,986,128    +5,960     239,062     +15      9,772,302                                               +1,402      974,764      2,534                                                                                                                                                                       Africa                                                                 
-        **Total:**                                                                                                2,755,901     +36,614    6,097       +86      2,400,766                                               +59,273     349,038      431                                                                                                                                                                         Australia/Oceania                                                      
+        **Total:**                                                                                                2,755,975     +36,688    6,097       +86      2,400,818                                               +59,325     349,060      431                                                                                                                                                                         Australia/Oceania                                                      
         **Total:**                                                                                                721                      15                   706                                                                 0            0                                                                                                                                                                                                                                                  
-        **Total:**                                                                                                373,477,766   +551,827   5,677,260   +1,832   294,931,657                                             +415,956    72,868,849   94,480      47,913.7      728.3                                                                                                                                             All                                                                    
+        **Total:**                                                                                                373,477,840   +551,901   5,677,260   +1,832   294,931,709                                             +416,008    72,868,871   94,480      47,913.7      728.3                                                                                                                                             All                                                                    
   ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   \#    Country,\                                                                                                 Total\        New\         Total\      New\     Total\        New\         Active\      Serious,\   Tot Cases/\   Deaths/\   Total\        Tests/\      Population                                                                                                  Continent           1 Case\   1 Death\  1 Test\ New        New         Active
@@ -856,6 +856,8 @@ Latest News {#news align="left" style="margin-bottom: 50px;"}
 -----------
 #### January 30 (GMT)
 [Updates]{#updates .news_category_title}
+-   **74 new cases** in
+    **[Palau](https://www.worldometers.info/coronavirus/country/palau/)** [\[[source](https://www.facebook.com/MHHSPalau/photos/a.756950961025799/4869390163115171/?type=3&source=48){.news_source_a}\]]{.source}
 -   **9,332 new cases** and **14 new deaths** in
     **[Lithuania](https://www.worldometers.info/coronavirus/country/lithuania/)** [\[[source](https://koronastop.lrv.lt/en/){.news_source_a}\]]{.source}
 -   **266 new cases** and **1 new death** in
@@ -2929,8 +2931,6 @@ January 24
     **[Greenland](https://www.worldometers.info/coronavirus/country/greenland/)** [\[[source](https://corona.nun.gl/da/){.news_source_a}\]]{.source}
 -   **525 new cases** in **[Faeroe
     Islands](https://www.worldometers.info/coronavirus/country/faeroe-islands/)** [\[[source](https://korona.fo/statistics){.news_source_a}\]]{.source}
--   **38 new cases** in
-    **[Djibouti](https://www.worldometers.info/coronavirus/country/djibouti/)** [\[[source](https://www.facebook.com/photo/?fbid=302210931938520&set=a.294059039420376){.news_source_a}\]]{.source}
 View More News ![view
 more](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAADAFBMVEX///90dHRsbGttbWxtbWtzc3Jqamlqamhra2lra2ppaWhnZ2ZpaWdmZmVwcHBoaGZvb25sbGptbW12dnZubm51dXV2dnVwcG9zc3Nzc3R3d3doaGdycnJnZ2VxcXF1dXZ0dHVvb28AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF9IACodnd2d3UAAAAAAAABAAAAAAAtRCHzwHcAABkAAAAAADAAAAAAAAAAAAAtRHgAAHcAAAAAAAAAAAAAAABMAAB2d3YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvFCwVLHc0ca8AGfQQAID0YMA4ABkAGfQAAAAAgAAAAAAAAAAAAAUAYAAAAAAAAAAwT6ReqHcABvgAxQAAAAD0NAA4ABkAGfQAAAAAAAAAAAAAAAAAAGQAAAAYAAAAzj8AABgAAAAMAAAAGAD4VvheqAYIBvgAzj/FAAAvKAD8p1MAGfMsUPaeyXcAdy0AAAAAAAAAAAAAAAAAAAAAAAC7KAAspgh2auQZ9KDkTQC3dmoAAAAAAAAAAABrwAB2auQAAGAAAAAFAAAAAAAAAIAAgAAAwBAAAAAACIgAAAADAAAAAABCAEBeqAAABvgAAAD4XqgAAAYAAAAAAAAAArEAAAAYAAAAAAAAAAD0QABAABkAAAAAAAD0kAAAABkAAAAAAAAAAAAAAAAAAABmABBmZmYMOSAAAAAAAAIBAQA4ABkydFcZ9NDhHgAAdmoAAAAAAAL0uAAAABkAAAAAABgAgAAAAAAAAAAAAAAAAADEi2NXAAAAAXRSTlMAQObYZgAAAAFiS0dEi/JvR+AAAAAJcEhZcwAALiMAAC4jAXilP3YAAACPSURBVHja5ZJBDoAgDATdg1dCVESNQfj/J4USlSrgXXujM5Ql0DR/KoF7R7JO16PlfFAY07UGJs7nhe/gxpOHFJfh5y+5nIeR46u4jMi1SbnZoL1hgxG5U8qlxgQ4mrE6yicVv9VpWABZToamGQV+GnR+jgfDUi5Z4McMz1F6U28MNU6GrXEyUP85b/yrtQMhJwlGqKwmOAAAAABJRU5ErkJggg==)
 <div>
