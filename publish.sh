@@ -8,11 +8,11 @@ ns=$(date +%N)
 loc="Ecublens (Switzerland)"
 symb=timestamp
 gistdir=gist
-tsdir=ts
+tsdir=$basedir/ts
 date=$(date)
 pgm=$(readlink -m $0)
 echo "--- # $pgm on $date"
-sed -e 's/^tsdir=.*/tsdir=./' $0 > $tsdir/${0##*/}
+sed -e 's/^tsdir=.*/tsdir=./' $0 > $gistdir/${0##*/}
 
 if [ -e playload.txt ]; then
   playload=$(perl -pn -e 's/\n/\\n/g' playload.txt)
@@ -150,9 +150,13 @@ if git ls-remote --tags | grep "$ver"; then
 git push --delete $remote "$ver"
 fi
 fi
-git push --follow-tags origin master
+git push --follow-tags origin master --no-verify
+git push --follow-tags github HEAD:gist
+cd $basedir
+git add gist
 
 # -----------------------------------------
+cd $basedir
 cd $tsdir
 gitdir=$(git rev-parse --absolute-git-dir)
 git checkout main
