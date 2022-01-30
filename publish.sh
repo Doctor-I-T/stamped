@@ -47,7 +47,7 @@ pandoc -t html -t markdown $artifact/index.html | grep -v -e ':::' -e '^$' > wme
 pandoc -t html -t plain $artifact/index.html > $artifact/wmeters.txt
 gituser
 git commit -a -m "artifact on $(date)"
-git push
+git push github master
 cp -p $artifact/wmeters.txt $gistdir/
 # ------------------------------------------------------
 cd $gistdir
@@ -129,7 +129,7 @@ export GIT_COMMITTER_NAME="$fullname"
 export GIT_COMMITTER_EMAIL="$email"
 
 
-git add qm.log timestamp.txt timestamp.txt.asc timestamp.txt.asc.ots
+git add qm.log wmeters.txt timestamp.txt timestamp.txt.asc timestamp.txt.asc.ots
 
 date=$(date +%D);
 time=$(date +%T);
@@ -193,3 +193,4 @@ gitdir=$(git rev-parse --absolute-git-dir)
 git add artifact ts gist
 git checkout master
 git commit -a -m "${msg}"
+git push github master
