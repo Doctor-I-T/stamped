@@ -1,5 +1,8 @@
-<p>I undersign, Michel G. Combes located in certifie that the date is ````</p>
-<p><br>+Michel (aka Dr I·T) date: Sun Jan 30 10:50:47 AM CET 2022 location: <br>– <br></p>
-<br>(ip: )
+<p>I undersign, Michel G. Combes located in Ecublens (Switzerland) certifie that the date is <code>Sun Jan 30 12:23:09 PM CET 2022</code></p>
+<br>+Michel (aka Dr I·T) date: Sun Jan 30 12:23:09 PM CET 2022 location: Ecublens (Switzerland) <br>– <br> a timestamp made w/ ♡ that everyone agrees <br>(ip: 194.230.158.43)
 <hr>
-<p><a href="https://gateway.ipfs.io/ipfs/"></a></p>
+[
+<p>
+1643541773 QmdabsfzUTiz8HFnKtWihsbrAY1dcrJcV6mosbpc7vcZdY
+</p>
+<p>](https://gateway.ipfs.io/ipfs/QmRQ2XLL7LCNF931vbNnCkvReWwoM4bRBGvKM5HmFZY3fP)</p>
