@@ -162,9 +162,12 @@ git add gist
 cd $basedir
 cd $tsdir
 gitdir=$(git rev-parse --absolute-git-dir)
+git checkout gist
+git pull gist master
 git checkout main
-git merge gist
-git add ots wmeters.txt
+#git merge github gist:main --allow-unrelated-histories
+#git merge gist --allow-unrelated-histories
+git add ots
 
 ( cd $gitdir; git --bare update-server-info )
 dgit=$(ipfs add -r $gitdir -Q)
