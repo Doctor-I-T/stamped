@@ -109,8 +109,9 @@ sed -e "s/tic: .*/tic: $tic/" -e "s/ver: .*/ver: $ver/" -e "s/ns: .*/ns: $ns/" \
 if [ -e timestamp.txt.asc.ots ]; then
     sha=$(ots info  timestamp.txt.asc.ots | cut -d' ' -f4)
     otid=$(echo $hash | cut -c-12)
-    ots upgrade timestamp.txt.asc.ots
+    if ots upgrade timestamp.txt.asc.ots; then
     mv -n timestamp.txt.asc.ots $tsdir/ots/timestamp-$otid.txt.asc.ots
+    fi
 fi
 hash=$(openssl sha256 -r timestamp.txt.asc | cut -d' ' -f1)
 otid=$(echo $hash | cut -c-12)
