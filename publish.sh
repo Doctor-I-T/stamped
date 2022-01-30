@@ -1,6 +1,7 @@
 #
 
-artifact=artifact
+basedir=$HOME/repo/gist/stampit
+artifact=$basedir/artifact
 
 tic=$(date +%s)
 ns=$(date +%N)
@@ -10,6 +11,7 @@ tsdir=.
 date=$(date)
 pgm=$(readlink -m $0)
 echo "--- # $pgm on $date"
+sed -e 's/^tsdir=.*/tsdir=./' $0 > $tsdir/${0##*/}
 
 playload="$*"
 
@@ -24,7 +26,7 @@ fi
 
 # ------------------------------------------------------
 cd $tsdir
-git checkout master
+git checkout gist
 gituser
 
 echo "We've got (time)stamp" | ipfs add --pin=true -q
@@ -98,7 +100,7 @@ otid=$(echo $hash | cut -c-12)
 echo otid: $otid
 rm -f timestamp.txt.asc.ots
 ots stamp timestamp.txt.asc
-cp -p timestamp.txt.asc timestamp-$otid.txt.asc
+cp -p timestamp.txt.asc signed/timestamp-$otid.txt.asc
 cp -p timestamp.txt.asc.ots ots/timestamp-$otid.txt.asc.ots
 
 cp -p $gitdir/info/refs info-refs.txt
