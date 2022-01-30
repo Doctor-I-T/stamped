@@ -66,6 +66,7 @@ echo headid: $headid
 
 ( cd $gitdir; git --bare update-server-info )
 dgit=$(ipfs add -r $gitdir -Q)
+echo dgit: $dgit
 
 #set -e
 if [ ! -e  original-timestamp.md.gpg ]; then
@@ -73,6 +74,7 @@ gpg --sign -u "Michel G. Combes" original-timestamp.md
 fi
 rm -f original-timestamp.md original-timestamp.md.asc
 #gpg --verify original-timestamp.md.gpg
+# re-sign original timestamp
 gpg --batch -o original-timestamp.md --verify original-timestamp.md.gpg
 gpg --clear-sign -a -u "Michel G. Combes" original-timestamp.md
 

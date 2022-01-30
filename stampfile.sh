@@ -7,5 +7,5 @@ ipfs add "$@" | perl -S stamped.pl >> $STAMPDIR/stamped.log
 msg=$(tail -1 $STAMPDIR/stamped.log | cut -d' ' -f-2)
 echo "$msg" > $STAMPDIR/playload.txt
 cd $STAMPDIR
-sh publish.sh
+sh -xe publish.sh
 
