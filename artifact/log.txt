@@ -1430,3 +1430,149 @@ Downloaded: 1 files, 1.7M in 15s (110 KB/s)
 Converting links in /home/michelc/repo/gist/stampit/artifact/index.html... 2393.
 36-2357
 Converted links in 1 files in 0.2 seconds.
+--2022-03-14 00:04:57--  https://www.worldometers.info/coronavirus/
+Resolving www.worldometers.info (www.worldometers.info)... 172.67.70.249, 104.26.5.2, 104.26.4.2, ...
+Connecting to www.worldometers.info (www.worldometers.info)|172.67.70.249|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘/home/michelc/repo/gist/stampit/artifact/index.html’
+
+     0K .......... .......... .......... .......... ..........  143K
+    50K .......... .......... .......... .......... ..........  244K
+   100K .......... .......... .......... .......... ..........  217K
+   150K .......... .......... .......... .......... ..........  197K
+   200K .......... .......... .......... .......... ..........  212K
+   250K .......... .......... .......... .......... ..........  123K
+   300K .......... .......... .......... .......... ..........  208K
+   350K .......... .......... .......... .......... ..........  333K
+   400K .......... .......... .......... .......... ..........  379K
+   450K .......... .......... .......... .......... ..........  315K
+   500K .......... .......... .......... .......... ..........  426K
+   550K .......... .......... .......... .......... ..........  400K
+   600K .......... .......... .......... .......... ..........  461K
+   650K .......... .......... .......... .......... ..........  332K
+   700K .......... .......... .......... .......... ..........  412K
+   750K .......... .......... .......... .......... ..........  390K
+   800K .......... .......... .......... .......... ..........  318K
+   850K .......... .......... .......... .......... ..........  168K
+   900K .......... .......... .......... .......... ..........  190K
+   950K .......... .......... .......... .......... ..........  213K
+  1000K .......... .......... .......... .......... ..........  111K
+  1050K .......... .......... .......... .......... ..........  122K
+  1100K .......... .......... .......... .......... ..........  144K
+  1150K .......... .......... .......... .......... ..........  201K
+  1200K .......... .......... .......... .......... ..........  169K
+  1250K .......... .......... .......... .......... ..........  227K
+  1300K .......... .......... .......... .......... ..........  259K
+  1350K .......... .......... .......... .......... ..........  289K
+  1400K .......... .......... .......... .......... ..........  266K
+  1450K .......... .......... .......... .......... ..........  296K
+  1500K .......... .......... .......... .......... ..........  310K
+  1550K .......... .......... .......... .......... ..........  259K
+  1600K .......... .......... .......... .......... ..........  358K
+  1650K .......... .......... .......... .......... ......      501K=7.3s
+
+Last-modified header missing -- time-stamps turned off.
+2022-03-14 00:05:05 (231 KB/s) - ‘/home/michelc/repo/gist/stampit/artifact/index.html’ saved [1737076]
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/favicon/favicon.ico
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/favicon.ico’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/css/bootstrap.min.css
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/bootstrap.min.css’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/wm16.css
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/wm16.css’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/js/jquery.min.js
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/jquery.min.js’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/js/bootstrap.min.js
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/bootstrap.min.js’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/js/ie10-viewport-bug-workaround.js
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/ie10-viewport-bug-workaround.js’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/img/worldometers-logo.gif
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/worldometers-logo.gif’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/js/highcharts.js
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/highcharts.js’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/js/js.cookie.min.js
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/js.cookie.min.js’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/js/countries.js?v=1_2
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/countries.js?v=1_2’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/css/selectize.bootstrap3.css
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/selectize.bootstrap3.css’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/js/selectize.min.js
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/selectize.min.js’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:05--  https://www.worldometers.info/img/worldometers-logo-footer.png
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/worldometers-logo-footer.png’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:06--  https://www.worldometers.info/fonts/glyphicons-halflings-regular.eot
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/glyphicons-halflings-regular.eot’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:06--  https://www.worldometers.info/fonts/glyphicons-halflings-regular.eot%3F
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 404 Not Found
+2022-03-14 00:05:06 ERROR 404: Not Found.
+
+--2022-03-14 00:05:06--  https://www.worldometers.info/fonts/glyphicons-halflings-regular.woff2
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/glyphicons-halflings-regular.woff2’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:06--  https://www.worldometers.info/fonts/glyphicons-halflings-regular.woff
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/glyphicons-halflings-regular.woff’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:07--  https://www.worldometers.info/fonts/glyphicons-halflings-regular.ttf
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/glyphicons-halflings-regular.ttf’ not modified on server. Omitting download.
+
+--2022-03-14 00:05:07--  https://www.worldometers.info/fonts/glyphicons-halflings-regular.svg
+Reusing existing connection to www.worldometers.info:443.
+HTTP request sent, awaiting response... 304 Not Modified
+File ‘/home/michelc/repo/gist/stampit/artifact/glyphicons-halflings-regular.svg’ not modified on server. Omitting download.
+
+FINISHED --2022-03-14 00:05:07--
+Total wall clock time: 9.9s
+Downloaded: 1 files, 1.7M in 7.3s (231 KB/s)
+Converting links in /home/michelc/repo/gist/stampit/artifact/index.html... 2399.
+36-2363
+Converted links in 1 files in 0.08 seconds.

@@ -1,5 +1,5 @@
 [submodule "gist"]
-	path = gist
+	path = _gist
 	url = git@gist.github.com:97f0fe8b5bf77c6ba18d4da0b9e51641.git
 [submodule "ts"]
 	path = ts
